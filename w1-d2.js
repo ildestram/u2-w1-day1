@@ -65,4 +65,4 @@ console.log(name1 === name2);
 // != diverso
 console.log(name1 != name2);
 
-console.log(name1.toLowerCase === name2.toLowerCase);
+console.log(name1.toLowerCase() === name2.toLowerCase());

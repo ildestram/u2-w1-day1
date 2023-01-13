@@ -66,3 +66,44 @@ console.log(name1 === name2);
 console.log(name1 != name2);
 
 console.log(name1.toLowerCase() === name2.toLowerCase());
+
+function divisible(num){
+   // si utilizza l'operatore di modulo per verificare se il numero è perfettamente divisibile per 5
+   if(num % 5 === 0){
+      console.log("divisibile per 5");
+   } else {
+      console.log("non divisibile per 5");
+   }
+};
+
+console.log(divisible(8));
+// divisible(8); -> si può fare anche così
+
+function calcolaTotaleCheckOut (totalShoppingCart){
+   let costoSpedizione;
+   if (totalShoppingCart > 50){
+      costoSpedizione = 0;
+   } else {
+      costoSpedizione = 10
+   };
+
+   // dichiariamo una costante sconto che calcola il valore dello sconto del 20% sul totale del carrello
+   const sconto = totalShoppingCart * 0.2;
+   return totalShoppingCart - sconto + costoSpedizione;
+};
+
+function controllaSeUgualeAOtto (num1, num2){
+   if(num1 === 8 || num2 === 8 || num1 + num2 === 8 || num1 - num2 === 8){
+      return true; 
+      // l'operatore di OR (||) verifica se almeno una condizione è vera
+      // se la condizione è vera la funzione restituisce true
+   } else {
+      return false;
+      // altrimenti la funzione restituisce falso
+   };
+};
+// l'operatore OR (||) è un operatore di confronto che restituisce true se almeno una delle condizioni è vera
+// altrimenti false
+if(num1 > num2 || num1 === num2)
+// dichiariamo la funzione
+// questo codice viene eseguito se la prima condizione o la seconda condizione sono vere

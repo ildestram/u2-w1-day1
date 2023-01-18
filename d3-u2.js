@@ -208,10 +208,14 @@ for(let i = 0; i <= 10; i++){
 /* ESERCIZIO 15
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8.
 */
+// for(let n = 0; n <= 10; n++){
+//     if(n > 3 && n < 8){
+//         continue;
+//     };
+// };
 for(let n = 0; n <= 10; n++){
-    if(n > 3 && n < 8){
-        continue;
-    };
+    console.log(n);
+    
 };
 
 /* ESERCIZIO 16

@@ -122,18 +122,13 @@ oddOrEven(14);
     }
 */
 // let val = 7;
-let val = 7;
-switch (val) {
-    case val < 10:
-        console.log("meno di 10");
-        break;
-    case val < 5:
-        console.log("meno di 5");
-        break;
-    case val >= 10:
-        console.log("uguale a 10 o maggiore");
-    default:
-        console.log("hai finito i numeri");
+let val = 10;
+if(val < 5){
+    console.log("meno di 5");
+} else if (val < 10){
+    console.log("meno di 10");
+} else if(val >= 10){
+    console.log("uguale a 10 o maggiore");
 };
 
 /*
@@ -213,6 +208,11 @@ for(let i = 0; i <= 10; i++){
 /* ESERCIZIO 15
   Mostra i numeri da 0 a 10 (incluso) in ordine ascendente, ma evitando di mostrare i numeri 3 e 8.
 */
+for(let n = 0; n <= 10; n++){
+    if(n > 3 && n < 8){
+        continue;
+    };
+};
 
 /* ESERCIZIO 16
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.

@@ -213,24 +213,72 @@ for(let i = 0; i <= 10; i++){
 //         continue;
 //     };
 // };
-for(let n = 0; n <= 10; n++){
-    console.log(n);
-    
+let valori = [1,2,3,4,5,6,7,8,9,10];
+for(let j = 0; j < valori.length; j++){
+    const elementi = valori[j];
+    console.log(elementi);
+    if(valori.length[2] && valori.length[7]){
+        console.log("niente da fare");
+    };
 };
 
 /* ESERCIZIO 16
   Scrivi un ciclo in JavaScript per iterare da 0 a 15. Per ciascun elemento, il ciclo deve controllare che il valore corrente sia pari o dispari, e mostrare il risultato in console.
 */
+for(let i = 0; i < 15; i++){
+    console.log(i);
+    function isNotEven(i){
+        if(isNaN(i) === false){
+            return (i %2 == 1 ? true : false);
+        } else{
+            return null;
+        };
+    };
+};
 
 /* ESERCIZIO 17
   Scrivi un algoritmo che iteri i numeri da 1 a 100, stampandoli in console. Se un valore tuttavia è multiplo di 3, stampa al suo posto la parola "Fizz" e se il numero è multiplo di 5, stampa "Buzz". Se le condizioni si verificano entrambe, stampa "FizzBuzz".
 */
+for(let i = 0; i <= 100; i++){
+    console.log(i);
+    if(i % 3){
+        console.log("Frizz");
+    } else if(i % 5){
+        console.log("Buzz");
+    } else {
+        console.log("Fizz Buzz");
+    };
+};
 
 
 /* ESERCIZIO 18
   Scrivi un algoritmo per controllare il giorno della settimana. Usa uno switch-case sulla variabile "day", che può avere un valore da 1 a 7.
   Ad esempio, se il valore di "day" è 1, stampa in console "Lunedì"; se il valore fosse 3, in console dovrebbe comparire "Mercoledì".
 */
+let day;
+switch(new Date().getDay()){
+    case 0:
+        day = "Domenica";
+    case 1:
+        day = "Lunedì";
+        break;
+    case 2: 
+        day = "Martedì";
+        break;
+    case 3:
+        day = "Mercoledì";
+        break;
+    case 4: 
+        day = "Giovedì";
+        break;
+    case 5: 
+        day = "Venerdì";
+        break;
+    case 6:
+        day = "Sabato";
+        break;
+};
+console.log(`Oggi è ${day}`);
 
 
 

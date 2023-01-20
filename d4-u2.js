@@ -209,25 +209,52 @@ const movies = [
 /* ESERCIZIO 12
   Scrivi del codice per trovare il film piÃ¹ vecchio nell'array fornito.
 */
+// ho utilizzato il metodo find()
+let obj = movies.find(o => o.Year < 1970);
+console.log(obj);
 
 
 /* ESERCIZIO 13
   Scrivi del codice per ottenere il numero di film contenuti nell'array fornito.
 */
+let movieLength = movies.length;
+console.log(movieLength);
 
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+let titleMovies = movies.filter(el => el.Title);
+console.log(titleMovies);
 
 /* ESERCIZIO 15
   Scrivi del codice per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+// for(let i = 0; i <= movies.length; i++){
+//   let currentMill = movies.find(ob => ob.Year < 2020);
+//   console.log(currentMill);
+// };
+// console.log(JSON.stringify(movies[0].Title));
+console.log(movies[0].Title);
+movies.forEach(function(el){
+  let millYear = movies.find(ob => ob.Year >= 2000);
+  if(movies.Year >= 2000){
+    console.log(movies.Year);
+  };
+});
+// PERCHE' CAZZO NON RIESCO A FARE LA LOGICA!!!!!
+
 
 /* ESERCIZIO 16
   Scrivi del codice per ottenere dall'array fornito il film con il seguente id.
 */
 const id = 'tt0355702'
+// movies.findIndex(x => x.id === 'tt0355702');
+// let check = movies.find(x => x.id === 'tt0355702');
+// console.log(check);
+// const objs = movies.find(ob => ob.id === 'tt0355702');
+// let results = movies.find(val => val.id === 'tt0355702');
+// console.log(results);
 
 /* ESERCIZIO 17
   Scrivi del codice per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.

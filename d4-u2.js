@@ -235,7 +235,7 @@ console.log(titleMovies);
 //   console.log(currentMill);
 // };
 // console.log(JSON.stringify(movies[0].Title));
-console.log(movies[0].Title);
+// console.log(movies[0].Title);
 movies.forEach(function(el){
   let millYear = movies.find(ob => ob.Year >= 2000);
   if(movies.Year >= 2000){
@@ -255,10 +255,14 @@ const id = 'tt0355702'
 // const objs = movies.find(ob => ob.id === 'tt0355702');
 // let results = movies.find(val => val.id === 'tt0355702');
 // console.log(results);
+let movieId = movies.find(movieId => movieId.id = 'tt0355702');
+console.log(movieId);
+// oddio mi ha trovato un altro id
 
 /* ESERCIZIO 17
   Scrivi del codice per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
 
 /* ESERCIZIO 18
   Scrivi del codice per recuperare tutti i film dall'array fornito che contengono una parola fornita.

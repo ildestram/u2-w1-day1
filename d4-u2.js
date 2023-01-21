@@ -6,36 +6,71 @@ const me = {
     lastName: 'Doe',
     skills: ['javascript', 'html', 'css'],
   }
-delete me.skills;
+// delete me.skills (lo potevo fare);
+me.skills.pop();
 console.log(me);
 
 /* ESERCIZIO 2
   Scrivi del codice per creare un array di soli valori DISPARI da 1 a 100.
  */
+// Primo modo
 const numbers = [1,23,34,44,56,68,73,81,90,100];
 const odds = numbers.filter((num) => num % 2 === 1);
 console.log(odds);
 
+// Secondo modo
+let disp = [];
+for(let i =0; i<=100; i++){
+  if(i % 2 !== 0){
+    disp.push(i);
+    // console.log(disp.push(i));
+  };
+};
+// console.log(disp);
+console.log(disp);
+
+
 /* ESERCIZIO 3
   Scrivi del codice per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
  */
+// Primo modo
 const arrayLength = 100;
 const randomNumber = [];
-for(let i = 0; i < arrayLength; i++){
+for(let i = 1; i < arrayLength; i++){
     randomNumber.push(Math.random());
 };
 console.log(randomNumber);
 
+// Secondo modo
+let arr = [];
+for(let i = 0; i < 10; i++){
+  arr[i] = Math.random() * (100 - 0) + 0;
+};
+console.log(arr);
+
+
+
 /* ESERCIZIO 4
   Scrivi del codice per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
+// Primo modo
 const numer = [1,5,10,15,20,25,30,35,40,45,50,55,60,65,70];
 const evens = numer.filter((num) => num % 2 === 0);
 console.log(evens);
 
+// Secondo modo
+let pari = [1,2,3,4,5,6,7,8,10];
+for(let i = 0; i <= pari.length; i++){
+  if(pari[i] % 2 === 0){
+    console.log(pari[i]);
+  };
+};
+
+
 /* ESERCIZIO 5
   Scrivi del codice per sommare a catena i numeri contenuti in un array.
  */
+// Primo modo
 function sumUp(array){
   const myArray = [1,5,9,12,15];
   let sum = 0;
@@ -48,16 +83,44 @@ function sumUp(array){
 };
 console.log(sumUp([1,5,9,12,15]));
 
+// Secondo modo
+let arrays = [1,2,3,4,5,6,7,8,9,10];
+let sums = 0;
+
+for(let i = 0; i < arrays.length; i++){
+  sums += arrays[i];
+  // console.log(sums);
+};
+console.log(sums);
+
 /* ESERCIZIO 6
   Scrivi del codice per incrementare di 1 tutti i valori numerici in un array.
 */
+// Primo modo
 const increment = [5,10,15];
 const newIncrement = increment.map(num => num + 1);
 console.log(newIncrement);
 
+// Secondo modo
+let omar = [1,2,3,4,5,6,7,8,9,10];
+
+for(let i = 0; i < omar.length; i++){
+  omar[i]++;
+};
+console.log(omar);
+
+
+// ESERCIZIO 7
+// Scrivi del codice per eliminare solo i valori PARI da un array;
+let myHarry = [1,2,3,4,5,6,7,8,9,10];
+myHarry = myHarry.filter(e => e % 2 === 1);
+console.log(myHarry);
+
+
 /* ESERCIZIO 8
   Scrivi del codice per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */
+// Primo modo
 let randomNumeri = [];
 for(let j = 0; j < 10; j++){
   let randomNum = Math.round(Math.random() * 10);
@@ -68,10 +131,24 @@ for(let j = 0; j < 10; j++){
 console.log(randomNumeri);
 
 
+// Secondo modo
+let randomLulu = [];
+for(let i = 0; i < 10; i++){
+  randomLulu[i] = Math.random() * (10) + 1;
+};
+console.log(randomLulu);
+
+
 /* ESERCIZIO 9
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+let epicode = ["EPICODE", "is", "great"];
+for(let i = 0; i < epicode.length; i++){
+  let stringaEpicode = epicode[i];
+  epicode[i] = stringaEpicode.length;
+};
+console.log(epicode);
 
 
 /* ESERCIZIO 10
@@ -86,8 +163,18 @@ console.log(reverseArray);
 /* ESERCIZIO 11
   Scrivi del codice per estrarre il massimo valore numerico da un array.
 */
+// Primo modo
 const higherNumber = [458,738,648,82739,28173982,828103];
 console.log(Math.max(...higherNumber));
+
+// Secondo modo
+let highesNumber = [458,738,648,82739,28173982,828103];
+let maximum = highesNumber.reduce(function(a,b){
+  return Math.max(a,b);
+});
+console.log(maximum);
+
+
 
 
 /* Questo array di film verrÃ  usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */

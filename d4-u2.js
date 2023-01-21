@@ -311,8 +311,17 @@ console.log(movieLength);
 /* ESERCIZIO 14
   Scrivi del codice per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+// Primo modo
 let titleMovies = movies.filter(el => el.Title);
 console.log(titleMovies);
+
+// Secondo modo
+let movieTitles = [];
+for(let i = 0; i < movies.length; i++){
+  movieTitles.push(movies[i].Title);
+};
+console.log(movieTitles);
+
 
 /* ESERCIZIO 15
   Scrivi del codice per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
@@ -330,6 +339,14 @@ movies.forEach(function(el){
   };
 });
 // PERCHE' CAZZO NON RIESCO A FARE LA LOGICA!!!!!
+
+let movieYears = [];
+for(let i = 0; i < movies.length; i++){
+  if(movies[i].Year > 2000){
+    movieYears.push(movies[i].Year);
+  };
+};
+console.log(movieYears);
 
 
 /* ESERCIZIO 16

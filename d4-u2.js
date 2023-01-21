@@ -359,9 +359,17 @@ const id = 'tt0355702'
 // const objs = movies.find(ob => ob.id === 'tt0355702');
 // let results = movies.find(val => val.id === 'tt0355702');
 // console.log(results);
-let movieId = movies.find(movieId => movieId.id = 'tt0355702');
-console.log(movieId);
+// let movieId = movies.find(movieId => movieId.id = 'tt0355702');
+// console.log(movieId);
 // oddio mi ha trovato un altro id
+
+let findId = [];
+for(let i = 0; i < movies.length; i++){
+  if(movies[i].imdbID === 'tt0355702' ){
+    findId.push(movies[i].imdbID === 'tt0355702');
+  };
+};
+console.log(findId);
 
 /* ESERCIZIO 17
   Scrivi del codice per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.

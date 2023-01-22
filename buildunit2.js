@@ -21,10 +21,16 @@ const amy = {
 
 function calcolaCheckOut(totalShoppingCart){
     let checkOut;
-    if(marco.isAmbassador, paul.isAmbassador, amy.isAmbassador === true){
+    if(marco.isAmbassador, paul.isAmbassador, amy.isAmbassador == true){
         checkOut = shippingCost - (shippingCost * 30);
-    } else {
+    } else if(marco.isAmbassador, paul.isAmbassador, amy.isAmbassador == false) {
         return shippingCost;
+    } else {
+        if(checkOut > 100){
+            return shippingCost;
+        } else {
+            let valoreFornito;
+            return shippingCost + valoreFornito;
+        };
     };
 };
-calcolaCheckOut();

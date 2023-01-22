@@ -366,6 +366,8 @@ const id = 'tt0355702'
 let findId = [];
 for(let i = 0; i < movies.length; i++){
   if(movies[i].imdbID === 'tt0355702' ){
+    // findId.push(movies[i].imdbID === 'tt0355702');
+    movies.find(val => val.id === 'tt0355702');
     findId.push(movies[i].imdbID === 'tt0355702');
   };
 };
@@ -375,7 +377,24 @@ console.log(findId);
   Scrivi del codice per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+// in questo modo mi fa vedere tutti gli anni uno dopo l'altro
+let allYears = [];
+for(let i = 0; i < movies.length; i++){
+  let nume = parseFloat(movies[i].Year);
+  allYears += nume;
+};
+console.log(allYears);
+
 
 /* ESERCIZIO 18
   Scrivi del codice per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
+let specificValue = "Lord of the Flies";
+let valueSpec = []
+for(let i = 0; i < movies.length; i++){
+  // let valueSpec = []
+  if(movies[i].Title.includes(specificValue)){
+    valueSpec.push(movies[i] === "Lord of the Flies");
+  };
+};
+console.log(valueSpec);

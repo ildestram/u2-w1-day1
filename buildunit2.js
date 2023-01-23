@@ -19,6 +19,30 @@ const amy = {
     isAmbassador: false,
 };
 
+/* Costo totale di spedizione = lista di prezzi, utenti e costo fisso di spedizione
+*/
+
+function totalCart(price, user, ship){
+    let totalPrice = 0;
+    let total = 0;
+
+    for(let i = 0; i < price.length; i++){
+        totalPrice += price[i];
+    };
+    if(user.isAmbassador === true){
+        totalPrice = totalPrice - (totalPrice * 0.3);
+    };
+    if(totalPrice > 100){
+        total = totalPrice;
+    } else {
+        total = totalPrice + ship;
+    };
+    return total;
+};
+
+let totalOfCart = totalCart(prices, marco, shippingCost);
+console.log(`Il totale da pagare per te è ${totalOfCart}`);
+
 // function calcolaCheckOut(totalShoppingCart){
 //     let checkOut;
 //     if(marco.isAmbassador, paul.isAmbassador, amy.isAmbassador == true){
@@ -34,3 +58,5 @@ const amy = {
 //         };
 //     };
 // };
+
+

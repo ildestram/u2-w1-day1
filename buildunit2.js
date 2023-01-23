@@ -40,23 +40,14 @@ function totalCart(price, user, ship){
     return total;
 };
 
+
 let totalOfCart = totalCart(prices, marco, shippingCost);
+let totalOfCart2 = totalCart(prices, amy, shippingCost);
+let totalOfCart3 = totalCart(prices, paul, shippingCost);
+console.log(`Il totale da pagare per te è ${totalOfCart2}`);
+console.log(`Il totale da pagare per te è ${totalOfCart3}`);
 console.log(`Il totale da pagare per te è ${totalOfCart}`);
 
-// function calcolaCheckOut(totalShoppingCart){
-//     let checkOut;
-//     if(marco.isAmbassador, paul.isAmbassador, amy.isAmbassador == true){
-//         checkOut = shippingCost - (shippingCost * 30);
-//     } else if(marco.isAmbassador, paul.isAmbassador, amy.isAmbassador == false) {
-//         return shippingCost;
-//     } else {
-//         if(checkOut > 100){
-//             return shippingCost;
-//         } else {
-//             let valoreFornito;
-//             return shippingCost + valoreFornito;
-//         };
-//     };
-// };
+
 
 

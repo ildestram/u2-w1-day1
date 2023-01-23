@@ -112,9 +112,35 @@ console.log(omar);
 
 // ESERCIZIO 7
 // Scrivi del codice per eliminare solo i valori PARI da un array;
-let myHarry = [1,2,3,4,5,6,7,8,9,10];
-myHarry = myHarry.filter(e => e % 2 === 1);
-console.log(myHarry);
+// let myHarry = [1,2,3,4,5,6,7,8,9,10];
+function arDispari(){
+  let myHarry = [1,2,3,4,5,6,7,8,9,10];
+  for(let i = 0; i < myHarry.length; i++){
+    // let myHarry = [1,2,3,4,5,6,7,8,9,10];
+    if(myHarry[i] % 2 !== 0){
+      // myHarry.pop();
+      // myHarry.slice(myHarry[i], myHarry[i]);
+      // myHarry.pop();
+      delete myHarry[i];
+    };
+    return myHarry.join("");
+  };
+  // console.log(arDispari);
+};
+console.log(arDispari());
+// console.log(arDispari());
+// console.log(arDispari);
+// let myHarry = [1,2,3,4,5,6,7,8,9,10];
+
+// myHarry = myHarry.filter(e => e % 2 === 1);
+// console.log(myHarry);
+// for(let i = 0; i < myHarry.length; i++){
+//   if(myHarry[i] % 2 === 0){
+//     // myHarry.pop();
+//     myHarry.slice(myHarry[i], myHarry[i]);
+//   };
+// };
+// console.log(myHarry);
 
 
 /* ESERCIZIO 8
@@ -338,7 +364,6 @@ movies.forEach(function(el){
     console.log(movies.Year);
   };
 });
-// PERCHE' CAZZO NON RIESCO A FARE LA LOGICA!!!!!
 
 let movieYears = [];
 for(let i = 0; i < movies.length; i++){
@@ -373,6 +398,15 @@ for(let i = 0; i < movies.length; i++){
 };
 console.log(findId);
 
+// function returnId(){
+//   let idFilm = movies.findIndex(o => o.imdbID == 'tt0355702');
+//   return movies[];
+// }
+// E' QUESTO IL MODO
+let idFilm = movies[movies.findIndex(o => o.imdbID === 'tt0355702' )];
+// let idFilm = movies.findIndex(o => o.imdbID == 'tt0355702');
+console.log(idFilm);
+
 /* ESERCIZIO 17
   Scrivi del codice per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
@@ -384,6 +418,30 @@ for(let i = 0; i < movies.length; i++){
   allYears += nume;
 };
 console.log(allYears);
+
+// secondo modo -> chiedere come funziona il forEach
+// let summup = movies[i].Year;
+let summi;
+
+for(let i = 0; i < movies.length; i++){
+  let sommar; 
+  // sommar = sommar + parseInt(movies[i].Year);
+  // sommar = parseInt(sommar + movies[i].Year);
+  // summi += parseInt(summi + movies[i].Year);
+  sommar = parseInt(sommar + parseInt(movies[i].Year));
+  summi = sommar;
+};
+console.log(summi);
+
+// let getWatt = movies.reduce((getWatt, movies) => {
+//   return getWatt + movies.Year;
+// }, 0);
+// console.log(getWatt);
+
+// const sumOfAges = movies.reduce((sum, movies) => sum + movies.Year, 0);
+// console.log(sumOfAges);
+
+const sumYear = movies.reduce((total, valoreCorrente) => total += parseInt(movies.Year));
 
 
 /* ESERCIZIO 18
